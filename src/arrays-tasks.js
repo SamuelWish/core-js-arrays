@@ -21,15 +21,8 @@
  *    getIntervalArray(3, 3) => [ 3 ]
  */
 function getIntervalArray(start, end) {
-  let count = start;
-  const newArr = [];
-  let i = 0;
-  if (count >= start || count <= end) {
-    newArr[i] = count;
-    i += 1;
-    count += 1;
-  }
-  return newArr;
+  const length = end - start + 1;
+  return Array.from({ length }, (_, i) => start + i);
 }
 
 /**
@@ -80,6 +73,10 @@ function findElement(/* arr, value */) {
  *    findAllOccurrences([ true, 0, 1, 'true' ], true) => 1
  */
 function findAllOccurrences(/* arr, item */) {
+  /* const idx = arr.indexOf(item);
+  let count = 0;
+  if (idx !== -1 && idx < arr.length) count += 1;
+  return count; */
   throw new Error('Not implemented');
 }
 
