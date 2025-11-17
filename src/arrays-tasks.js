@@ -95,6 +95,32 @@ function findAllOccurrences(/* arr, item */) {
  *    removeFalsyValues([ false, 0, NaN, '', undefined ]) => [ ]
  */
 function removeFalsyValues(/* arr */) {
+  /* let idx = 0;
+  if (arr.includes(false)) {
+    idx = arr.indexOf(false);
+    arr.splice(idx, 1);
+  }
+  if (arr.includes(null)) {
+    idx = arr.indexOf(null);
+    arr.splice(idx, 1);
+  }
+  if (arr.includes(0)) {
+    idx = arr.indexOf(0);
+    arr.splice(idx, 1);
+  }
+  if (arr.includes('')) {
+    idx = arr.indexOf('');
+    arr.splice(idx, 1);
+  }
+  if (arr.includes(undefined)) {
+    idx = arr.indexOf(undefined);
+    arr.splice(idx, 1);
+  }
+  if (arr.includes(NaN)) {
+    idx = arr.indexOf(NaN);
+    arr.splice(idx, 1);
+  }
+  return arr; */
   throw new Error('Not implemented');
 }
 
@@ -108,8 +134,9 @@ function removeFalsyValues(/* arr */) {
  *    getStringsLength([ '', 'a', 'bc', 'def', 'ghij' ]) => [ 0, 1, 2, 3, 4 ]
  *    getStringsLength([ 'angular', 'react', 'ember' ]) => [ 7, 5, 5 ]
  */
-function getStringsLength(/* arr */) {
-  throw new Error('Not implemented');
+function getStringsLength(arr) {
+  const newArr = arr.map((item) => item.length);
+  return newArr;
 }
 
 /**
